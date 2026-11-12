@@ -1,0 +1,44 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/favicon.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# Redirige www y el subdominio de Netlify al dominio principal (descomenta cuando el dominio esté conectado;
+# cambia TU-SITIO por el nombre real del sitio en Netlify)
+# [[redirects]]
+#   from = "https://www.fisiocorpo.com/*"
+#   to = "https://fisiocorpo.com/:splat"
+#   status = 301
+#   force = true
+# [[redirects]]
+#   from = "https://TU-SITIO.netlify.app/*"
+#   to = "https://fisiocorpo.com/:splat"
+#   status = 301
+#   force = true

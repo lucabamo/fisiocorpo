@@ -11,6 +11,21 @@
     a.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg);
   });
 
+  // Formulario de contacto → abre WhatsApp con los datos (GitHub Pages no procesa formularios)
+  var form = document.querySelector('.js-wa-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.querySelector('[name="bot-field"]').value) return;
+      var v = function (n) { return (form.querySelector('[name="' + n + '"]').value || '').trim(); };
+      var msg = 'Hola Andrea, me gustaría agendar una cita de fisioterapia.\n\n' +
+        'Nombre: ' + v('nombre') + '\n' +
+        'Teléfono: ' + v('telefono') + '\n' +
+        'Motivo: ' + v('motivo');
+      window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+    });
+  }
+
   // Menú móvil
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('menu');

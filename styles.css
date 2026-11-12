@@ -357,3 +357,59 @@ address{font-style:normal;margin-bottom:1.5rem;line-height:1.8}
 .quote-banner p{color:var(--purple-800)}
 .quote-banner p::before{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--lavender-300);margin:0 auto 1.4rem}
 .quote-banner footer{color:var(--purple-500);font-weight:600}
+
+/* ===== v2: SEO multipágina ===== */
+.hero__visual{display:grid;place-items:center}
+.hero__mark{position:relative;width:62%;height:auto;z-index:1;filter:drop-shadow(0 6px 18px rgba(0,0,0,.18))}
+.hero__photo{position:absolute;inset:14%;width:72%;height:72%;object-fit:cover;border-radius:50%;border:3px solid rgba(255,255,255,.55);z-index:1}
+.about__brand{aspect-ratio:4/5;max-width:420px;margin-inline:auto;border-radius:28px;background:linear-gradient(150deg,var(--purple-600),var(--purple-900));display:grid;place-items:center;box-shadow:var(--shadow)}
+.about__brand img{width:70%;height:auto}
+.card__link{color:inherit;text-decoration:none}
+.card__link::after{content:"";position:absolute;inset:0}
+.cards--svc .card{position:relative}
+.cards--svc .card:hover h3{color:var(--purple-600)}
+.cards--svc .card p::after{content:" Ver más →";color:var(--purple-600);font-weight:600}
+.center{text-align:center}
+.muted{color:var(--muted)}
+.session__name{font-size:.8rem}
+.btn--light{background:#fff;color:var(--purple-800)}
+.footer__h{color:#fff;font-size:1rem;margin-bottom:.8rem}
+@media (min-width:900px){.footer__inner--4{grid-template-columns:1.3fr 1fr 1.1fr .8fr}}
+
+/* Páginas internas */
+.page-hero{background:radial-gradient(900px 500px at 90% -20%,var(--lavender-200),transparent 60%),linear-gradient(180deg,var(--lavender-100),#fff);padding:2rem 0 3rem}
+.page-hero h1{font-size:clamp(1.9rem,5vw,3rem);max-width:22ch}
+.page-hero .lead{max-width:42rem}
+.crumbs{font-size:.88rem;color:var(--muted);margin-bottom:1.2rem}
+.crumbs a{color:var(--purple-600);text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.section--sm{padding:3.5rem 0}
+.prose{max-width:760px}
+.prose h2{font-size:clamp(1.4rem,3vw,1.8rem);margin-top:2.4rem}
+.prose h2:first-child{margin-top:0}
+.prose p,.prose li{font-size:1.04rem}
+.checklist{list-style:none;padding:0;margin:0 0 1.2rem;display:grid;gap:.65rem}
+.checklist li{display:flex;gap:.6rem;align-items:flex-start}
+.checklist svg{flex:none;width:20px;height:20px;margin-top:.25rem;fill:none;stroke:var(--purple-600);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.tiers-mini{padding-left:1.2rem;display:grid;gap:.5rem}
+.sessions--inline{margin-bottom:1rem}
+.callout{background:var(--lavender-100);border-left:4px solid var(--purple-600);border-radius:0 14px 14px 0;padding:1.2rem 1.4rem;margin:2rem 0}
+.callout h3{margin-bottom:.4rem}
+.callout p{margin:0;color:var(--ink)}
+.related{list-style:none;padding:0;margin:0;display:grid;gap:.8rem}
+.related a{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--lavender-200);border-radius:14px;padding:1rem 1.2rem;font-weight:600;text-decoration:none;color:var(--purple-800);transition:box-shadow .2s,transform .2s}
+.related a:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.related--center{max-width:22rem;margin:1.5rem auto}
+@media (min-width:700px){.related:not(.related--center){grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.related:not(.related--center){grid-template-columns:repeat(3,1fr)}}
+.cta-band{background:linear-gradient(135deg,var(--purple-800),var(--purple-600));color:#fff;padding:3rem 0}
+.cta-band h2{color:#fff;font-size:clamp(1.5rem,3.5vw,2rem);margin-bottom:.3rem}
+.cta-band p{margin:0;color:var(--lavender-200)}
+.cta-band__inner{display:grid;gap:1.5rem;align-items:center}
+.cta-band__btns{display:flex;flex-wrap:wrap;gap:.8rem}
+@media (min-width:900px){.cta-band__inner{grid-template-columns:1fr auto}}
+@media (max-width:479px){.cta-band__btns .btn{flex:1 1 100%}}
+.prose .session__price{font-size:1.5rem}
+.prose .session__desc{font-size:.93rem}
+.session__name{margin:0 0 .3rem}
+@media (max-width:899px){.hero__visual{max-width:320px}}
